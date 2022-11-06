@@ -15,7 +15,8 @@ const getWeather = () => {
 	const city = input.value
 	const URL = API_LINK + city + API_KEY + API_UNITS
 
-	axios.get(URL).then(res => {
+	axios.get(URL)
+	.then(res => {
 		const temp = res.data.main.temp
 		const hum = res.data.main.humidity
 		const status = Object.assign({}, ...res.data.weather)
